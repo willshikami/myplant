@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:myplants/client/widgets/app_bar_actions.dart';
 import 'package:myplants/client/widgets/app_title.dart';
+import 'package:myplants/constants/widgets/custom_container.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -8,12 +9,8 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       backgroundColor: Theme.of(context).backgroundColor,
       body: SafeArea(
-        child: Container(
-          padding: EdgeInsets.symmetric(
-            horizontal: 18,
-            vertical: 8,
-          ),
-          child: Column(
+        child: CustomContainer(
+          childWidget: Column(
             children: <Widget>[
               AppBarActions(),
               AppTitle(),

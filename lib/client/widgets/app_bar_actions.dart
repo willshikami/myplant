@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:myplants/constants/widgets/app_bar_icons.dart';
+import 'package:myplants/routes/routes.dart';
 
 class AppBarActions extends StatelessWidget {
   @override
@@ -9,8 +10,12 @@ class AppBarActions extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
+          // Notifications page
           AppBarIcons(
-            appBarActionCallback: () {},
+            appBarActionCallback: () => Navigator.pushNamed(
+              context,
+              Routes.notifications,
+            ),
             appBarIcon: CupertinoIcons.bell,
             iconSize: 28,
             iconColor: Theme.of(context).textSelectionColor,
@@ -18,6 +23,7 @@ class AppBarActions extends StatelessWidget {
           SizedBox(
             width: 32,
           ),
+          // Add plant page
           AppBarIcons(
             appBarActionCallback: () {},
             appBarIcon: CupertinoIcons.add,

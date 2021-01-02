@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:myplants/client/pages/notifications.dart';
 
 import 'package:myplants/routes/routes.dart';
 import 'package:myplants/client/pages/homepage.dart';
@@ -12,6 +13,10 @@ class RouterGenerator {
       case Routes.home:
         return MaterialPageRoute<HomePage>(
           builder: (_) => HomePage(),
+        );
+      case Routes.notifications:
+        return MaterialPageRoute<NotificationsPage>(
+          builder: (_) => NotificationsPage(),
         );
       default:
         return _home();
