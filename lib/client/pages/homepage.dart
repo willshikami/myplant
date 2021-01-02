@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:myplants/ui/widgets/appbar.dart';
-import 'package:myplants/ui/widgets/apptitle.dart';
+import 'package:myplants/client/widgets/app_bar_actions.dart';
+import 'package:myplants/client/widgets/app_title.dart';
 
 class HomePage extends StatelessWidget {
   @override
@@ -15,7 +15,7 @@ class HomePage extends StatelessWidget {
           ),
           child: Column(
             children: <Widget>[
-              AppBarIcons(),
+              AppBarActions(),
               AppTitle(),
             ],
           ),
