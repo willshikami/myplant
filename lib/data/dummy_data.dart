@@ -17,15 +17,15 @@ class PlantData {
 }
 
 //List of plants dummy data
-List<PlantData> demoProducts = <PlantData>[
+List<PlantData> demoPlants = <PlantData>[
   PlantData(
     id: 1,
     plantImage:
         'https://cdn.shopify.com/s/files/1/0357/2567/2492/products/img_8745_facetune_14-05-2020-13-37-53_1_1024x1024.jpg?v=1592140356',
-    plantName: 'Money plant',
+    plantName: 'Money Plant',
     inHouseLocation: 'Kitchen',
     isWatered: false,
-    waterAfter: 1,
+    waterAfter: 0,
   ),
   PlantData(
     id: 2,
@@ -34,7 +34,7 @@ List<PlantData> demoProducts = <PlantData>[
     plantName: 'Zebra Succulent',
     inHouseLocation: 'Office',
     isWatered: false,
-    waterAfter: 2,
+    waterAfter: 1,
   ),
   PlantData(
     id: 3,
@@ -61,7 +61,7 @@ List<PlantData> demoProducts = <PlantData>[
     plantName: 'Cactus Jake',
     inHouseLocation: 'Balcony',
     isWatered: false,
-    waterAfter: 4,
+    waterAfter: 3,
   ),
   PlantData(
     id: 6,
@@ -71,5 +71,50 @@ List<PlantData> demoProducts = <PlantData>[
     inHouseLocation: 'Balcony',
     isWatered: false,
     waterAfter: 4,
+  ),
+];
+
+class NotificationItems {
+  final PlantData plantData;
+  final String wateringDate;
+  final String notficationTime;
+
+  NotificationItems({
+    @required this.notficationTime,
+    @required this.plantData,
+    @required this.wateringDate,
+  });
+}
+
+// Demo data for the cart
+List<NotificationItems> demoCarts = <NotificationItems>[
+  NotificationItems(
+      plantData: demoPlants[0],
+      wateringDate: 'Today',
+      notficationTime: '2 mins ago'),
+  NotificationItems(
+    plantData: demoPlants[1],
+    wateringDate: 'Yesterday',
+    notficationTime: '2 mins ago',
+  ),
+  NotificationItems(
+    plantData: demoPlants[3],
+    wateringDate: 'Yesterday',
+    notficationTime: '10:00am',
+  ),
+  NotificationItems(
+    plantData: demoPlants[0],
+    wateringDate: '28th December, 2020',
+    notficationTime: '11:00pm',
+  ),
+  NotificationItems(
+    plantData: demoPlants[4],
+    wateringDate: '28th December, 2020',
+    notficationTime: '3:00pm',
+  ),
+  NotificationItems(
+    plantData: demoPlants[6],
+    wateringDate: '28th December, 2020',
+    notficationTime: '12:00pm',
   ),
 ];

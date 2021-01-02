@@ -8,7 +8,8 @@ ThemeData appTheme() {
     primaryColor: Color(0xFF599E67),
     backgroundColor: Color(0xFFEFF4F8),
     splashColor: Color(0xFFFFFFFF),
-    accentColor: Color(0xFF828282),
+    accentColor: Color(0xFFEFF4F8),
+    secondaryHeaderColor: Color(0xFF828282),
     textSelectionHandleColor: Color(0xFF9AA0AC),
     textSelectionColor: Colors.black,
 
@@ -36,11 +37,19 @@ ThemeData appTheme() {
       headline5: TextStyle(
         fontSize: 16.0,
       ),
-      bodyText1: TextStyle(
-        fontSize: 14.0,
-        fontWeight: FontWeight.w700,
+      headline6: TextStyle(
+        fontSize: 16.0,
+        fontWeight: FontWeight.bold,
       ),
-      bodyText2: TextStyle(
+      subtitle1: TextStyle(
+        fontSize: 14.0,
+        fontWeight: FontWeight.w800,
+      ),
+      subtitle2: TextStyle(
+        fontSize: 14.0,
+        fontWeight: FontWeight.w400,
+      ),
+      bodyText1: TextStyle(
         fontSize: 12.0,
       ),
     ),
