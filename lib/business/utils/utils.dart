@@ -26,8 +26,24 @@ class Utils {
                     fieldTitle: 'Inhouse location',
                   ),
                   SizedBox(height: 24),
-                  CustomTextField(
-                    fieldTitle: 'Water every(number of days)',
+                  // CustomTextField(
+                  //   fieldTitle: 'Water every(number of days)',
+                  // ),
+                  Container(
+                    decoration: BoxDecoration(
+                        border: Border.all(
+                      width: 1,
+                    )),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(12),
+                            color: Theme.of(context).accentColor,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                   SizedBox(height: 24),
                   PrimaryButton(
