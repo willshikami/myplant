@@ -18,45 +18,50 @@ class _HomePageState extends State<HomePage> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      backgroundColor: Theme.of(context).backgroundColor,
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerFloat,
-      floatingActionButton: selectedPlant.isSelected.value == true
-          ? PrimaryButton(
-              buttonCallback: () {},
-              buttonTitle: 'Water plants',
-            )
-          : Container(),
-      body: SafeArea(
-        child: CustomContainer(
-          childWidget: Column(
-            children: <Widget>[
-              AppBarActions(),
-              SizedBox(
-                height: extraLargeSpace,
-              ),
-              AppTitle(),
-              SizedBox(
-                height: extraLargeSpace,
-              ),
-              Expanded(
-                child: GridView.builder(
-                  itemCount: demoPlants.length,
-                  gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
-                    mainAxisSpacing: smallSizeSpace,
-                    crossAxisSpacing: smallSizeSpace,
-                    crossAxisCount: 2,
-                    childAspectRatio: 0.63,
-                  ),
-                  itemBuilder: (context, index) => PlantCard(
-                    plant: demoPlants[index],
-                  ),
+    return StreamBuilder<Object>(
+        stream: selectedPlant.isSelected.stream,
+        builder: (context, snapshot) {
+          return Scaffold(
+            backgroundColor: Theme.of(context).backgroundColor,
+            floatingActionButtonLocation:
+                FloatingActionButtonLocation.centerFloat,
+            floatingActionButton: snapshot.data == true
+                ? PrimaryButton(
+                    buttonCallback: () {},
+                    buttonTitle: 'Water plants',
+                  )
+                : Container(),
+            body: SafeArea(
+              child: CustomContainer(
+                childWidget: Column(
+                  children: <Widget>[
+                    AppBarActions(),
+                    SizedBox(
+                      height: extraLargeSpace,
+                    ),
+                    AppTitle(),
+                    SizedBox(
+                      height: extraLargeSpace,
+                    ),
+                    Expanded(
+                      child: GridView.builder(
+                        itemCount: demoPlants.length,
+                        gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+                          mainAxisSpacing: smallSizeSpace,
+                          crossAxisSpacing: smallSizeSpace,
+                          crossAxisCount: 2,
+                          childAspectRatio: 0.63,
+                        ),
+                        itemBuilder: (context, index) => PlantCard(
+                          plant: demoPlants[index],
+                        ),
+                      ),
+                    )
+                  ],
                 ),
-              )
-            ],
-          ),
-        ),
-      ),
-    );
+              ),
+            ),
+          );
+        });
   }
 }
