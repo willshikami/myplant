@@ -4,7 +4,7 @@ import 'package:flutter/material.dart';
 class PlantData {
   final int id, waterAfter;
   final String plantName, inHouseLocation, plantImage;
-  final bool isWatered;
+  bool isWatered;
 
   PlantData({
     @required this.id,
@@ -21,7 +21,7 @@ List<PlantData> demoPlants = <PlantData>[
   PlantData(
     id: 1,
     plantImage:
-        'https://cdn.shopify.com/s/files/1/0357/2567/2492/products/img_8745_facetune_14-05-2020-13-37-53_1_1024x1024.jpg?v=1592140356',
+        'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fd12k85dmzrmztv.cloudfront.net%2Fmedia%2Fcatalog%2Fproduct%2Fcache%2F1%2Fimage%2F9df78eab33525d08d6e5fb8d27136e95%2Fj%2Fp%2Fjpip_money_plants_hybrid.jpg&f=1&nofb=1',
     plantName: 'Money Plant',
     inHouseLocation: 'Kitchen',
     isWatered: false,
