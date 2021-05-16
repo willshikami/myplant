@@ -1,29 +1,23 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 
 class AppBarIcons extends StatelessWidget {
   final Function appBarActionCallback;
-  final IconData appBarIcon;
-  final Color iconColor;
-  final double iconSize;
+  final String appBarIconPath;
 
   const AppBarIcons({
     Key key,
     @required this.appBarActionCallback,
-    @required this.appBarIcon,
-    @required this.iconColor,
-    @required this.iconSize,
+    @required this.appBarIconPath,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: appBarActionCallback,
-      child: Container(
-        child: Icon(
-          appBarIcon,
-          size: iconSize,
-          color: iconColor,
-        ),
+      child: SvgPicture.asset(
+        appBarIconPath,
+        width: 28,
       ),
     );
   }

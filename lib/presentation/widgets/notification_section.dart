@@ -41,7 +41,7 @@ class NotificationSection extends StatelessWidget {
               style: Theme.of(context)
                   .textTheme
                   .headline4
-                  .copyWith(color: Theme.of(context).textSelectionColor),
+                  .copyWith(color: Theme.of(context).highlightColor),
             ),
           ),
           SizedBox(
@@ -96,7 +96,7 @@ class NotificationSection extends StatelessWidget {
                                     .textTheme
                                     .headline6
                                     .copyWith(
-                                      color: appTheme().textSelectionColor,
+                                      color: appTheme().highlightColor,
                                     ),
                               ),
                             ]),

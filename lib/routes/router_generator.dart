@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:myplants/client/pages/notifications.dart';
+import 'package:myplants/presentation/pages/notifications.dart';
 
 import 'package:myplants/routes/routes.dart';
-import 'package:myplants/client/pages/homepage.dart';
+import 'package:myplants/presentation/pages/homepage.dart';
 
 class RouterGenerator {
   static Route<dynamic> generateRoute(RouteSettings settings) {

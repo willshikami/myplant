@@ -10,8 +10,8 @@ ThemeData appTheme() {
     splashColor: Color(0xFFFFFFFF),
     accentColor: Color(0xFFEFF4F8),
     secondaryHeaderColor: Color(0xFF828282),
-    textSelectionHandleColor: Color(0xFF9AA0AC),
-    textSelectionColor: Colors.black,
+    unselectedWidgetColor: Color(0xFF9AA0AC),
+    highlightColor: Colors.black,
 
     // Default font family.
     fontFamily: 'Avenir',

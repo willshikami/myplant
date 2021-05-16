@@ -17,7 +17,7 @@ class CustomTextField extends StatelessWidget {
           style: Theme.of(context)
               .textTheme
               .headline3
-              .copyWith(color: Theme.of(context).textSelectionColor),
+              .copyWith(color: Theme.of(context).highlightColor),
         ),
         SizedBox(height: 12),
         Container(

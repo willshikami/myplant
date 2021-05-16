@@ -10,7 +10,7 @@ class AppTitle extends StatelessWidget {
           Text(
             'My Plants',
             style: Theme.of(context).textTheme.headline1.copyWith(
-                  color: Theme.of(context).textSelectionColor,
+                  color: Theme.of(context).highlightColor,
                 ),
           )
         ],
